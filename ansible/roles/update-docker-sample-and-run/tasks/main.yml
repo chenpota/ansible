@@ -1,0 +1,12 @@
+---
+- name: Stop docker_sample_test
+  docker:
+    image: "localhost:5000/docker_sample:ubuntu16.amd64"
+    name: docker_sample_test
+    state: stopped
+    stop_timeout: 0
+- name: Pull the latest docker_sample and start
+  docker:
+    image: "localhost:5000/docker_sample:ubuntu16.amd64"
+    name: docker_sample_test
+    pull: always

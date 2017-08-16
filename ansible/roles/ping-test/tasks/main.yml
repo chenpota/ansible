@@ -1,0 +1,7 @@
+---
+- name: ping
+  ping:
+  register: msg
+- name: print message
+  debug:
+    msg: "{{msg}}"

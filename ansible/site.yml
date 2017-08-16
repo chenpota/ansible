@@ -1,0 +1,7 @@
+---
+- hosts: my_group
+  roles:
+  - ping-test
+  - setup-managed-node
+  - install-docker-ce
+  - update-docker-sample-and-run

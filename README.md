@@ -21,6 +21,6 @@ This repositroy shows an ansible demo using docker containers.
     $ make -C docker_control-machine
     $ docker run --name control-machine --network host -v ${PWD}/ansible:/ansible --rm -ti docker_control-machine:ubuntu16.amd64
 
-## Demo ansible
+## Demo ansible in control machine
 
     $ ansible-playbook -i ansible/hosts ansible/site.yml

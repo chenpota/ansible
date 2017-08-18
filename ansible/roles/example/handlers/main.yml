@@ -1,0 +1,3 @@
+---
+- name: add text to file2
+  shell: echo "complete" >> {{file_name_from_my_group}}

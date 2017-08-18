@@ -1,0 +1,16 @@
+---
+- name: Create file1
+  shell: touch {{file_name_from_all}}
+- name: Create file2
+  shell: touch {{file_name_from_my_group}}
+  notify: add text to file2
+- name: Create custom_file
+  shell: touch {{custom_file}}
+- name: copy setting.cfg
+  template:
+    src: setting.cfg.j2
+    dest: /root/setting.cfg
+- name: copy files
+  copy:
+    src: It_is_file
+    dest: /root/It_is_file

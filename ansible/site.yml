@@ -1,6 +1,7 @@
 ---
 - hosts: my_group
   roles:
+  - { role: example, custom_file: not_custom_file, cfg: abc }
   - ping-test
   - setup-managed-node
   - install-docker-ce
